@@ -7,7 +7,7 @@ const mockProducts = [
     name: 'Premium Hybrid Elite',
     description: 'Experience the perfect balance of foam comfort and spring support. Our Premium Hybrid Elite combines multiple layers of cooling gel memory foam with individually wrapped coils for targeted support and pressure relief.',
     price: 1299,
-    image: 'images/matres 1.png',
+    image: 'https://images.unsplash.com/photo-1565034947-1a1c7b08b4d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
     features: ['Cooling Gel Memory Foam', 'Individually Wrapped Coils', 'Zoned Support System', 'Eco-Friendly Materials'],
     specifications: {
       'Type': 'Hybrid',
@@ -16,7 +16,7 @@ const mockProducts = [
       'Trial': '100 Nights',
       'Warranty': '10 Years'
     },
-    images: ['images/matres 1.png', 'images/matres 2.png', 'images/matres 3.png'],
+    images: ['https://images.unsplash.com/photo-1565034947-1a1c7b08b4d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80', 'https://images.unsplash.com/photo-1595398572534-79c5288254d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80', 'https://images.unsplash.com/photo-1615634344166-0f66a842b317?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'],
     badge: 'BEST SELLER',
     rating: 4.8,
     reviewCount: 128
@@ -26,7 +26,7 @@ const mockProducts = [
     name: 'Luxury Memory Foam',
     description: 'Sink into cloud-like comfort with our advanced memory foam technology. The Luxury Memory Foam mattress adapts to your body shape, providing exceptional pressure relief and motion isolation for undisturbed sleep.',
     price: 999,
-    image: 'images/matres 2.png',
+    image: 'https://images.unsplash.com/photo-1595398572534-79c5288254d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
     features: ['Advanced Memory Foam', 'Motion Isolation', 'Pressure Relief', 'Hypoallergenic'],
     specifications: {
       'Type': 'Memory Foam',
@@ -35,7 +35,7 @@ const mockProducts = [
       'Trial': '100 Nights',
       'Warranty': '15 Years'
     },
-    images: ['images/matres 2.png', 'images/matres 1.png', 'images/matres 3.png'],
+    images: ['https://images.unsplash.com/photo-1595398572534-79c5288254d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80', 'https://images.unsplash.com/photo-1565034947-1a1c7b08b4d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80', 'https://images.unsplash.com/photo-1615634344166-0f66a842b317?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'],
     badge: 'MOST COMFORTABLE',
     rating: 4.7,
     reviewCount: 95
@@ -45,7 +45,7 @@ const mockProducts = [
     name: 'Natural Latex Supreme',
     description: 'Sleep naturally with our eco-friendly latex mattress. Made from sustainably sourced natural latex, this mattress offers responsive support, excellent durability, and natural cooling properties for a healthier sleep environment.',
     price: 1599,
-    image: 'images/matres 3.png',
+    image: 'https://images.unsplash.com/photo-1615634344166-0f66a842b317?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
     features: ['100% Natural Latex', 'Responsive Support', 'Cooling Properties', 'Eco-Certified'],
     specifications: {
       'Type': 'Natural Latex',
@@ -54,7 +54,7 @@ const mockProducts = [
       'Trial': '100 Nights',
       'Warranty': '20 Years'
     },
-    images: ['images/matres 3.png', 'images/matres 1.png', 'images/matres 2.png'],
+    images: ['https://images.unsplash.com/photo-1615634344166-0f66a842b317?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80', 'https://images.unsplash.com/photo-1565034947-1a1c7b08b4d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80', 'https://images.unsplash.com/photo-1595398572534-79c5288254d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'],
     badge: 'ECO FRIENDLY',
     rating: 4.9,
     reviewCount: 87
@@ -499,6 +499,9 @@ const initialState = {
   
   // Cart
   cart: JSON.parse(localStorage.getItem('aheza-cart')) || [],
+
+  // Wishlist
+  wishlist: JSON.parse(localStorage.getItem('aheza-wishlist')) || [],
   
   // UI States
   isMobileMenuOpen: false,
@@ -534,6 +537,11 @@ const ACTION_TYPES = {
   REMOVE_FROM_CART: 'REMOVE_FROM_CART',
   UPDATE_QUANTITY: 'UPDATE_QUANTITY',
   CLEAR_CART: 'CLEAR_CART',
+
+  // Wishlist
+  ADD_TO_WISHLIST: 'ADD_TO_WISHLIST',
+  REMOVE_FROM_WISHLIST: 'REMOVE_FROM_WISHLIST',
+  CLEAR_WISHLIST: 'CLEAR_WISHLIST',
   
   // UI States
   TOGGLE_MOBILE_MENU: 'TOGGLE_MOBILE_MENU',
@@ -614,6 +622,24 @@ const appReducer = (state, action) => {
     case ACTION_TYPES.CLEAR_CART:
       localStorage.setItem('aheza-cart', JSON.stringify([]));
       return { ...state, cart: [] };
+
+    // Wishlist
+    case ACTION_TYPES.ADD_TO_WISHLIST:
+      const newWishlist = state.wishlist.some(item => item.id === action.payload.id)
+        ? state.wishlist
+        : [...state.wishlist, { ...action.payload, addedAt: new Date().toISOString() }];
+      
+      localStorage.setItem('aheza-wishlist', JSON.stringify(newWishlist));
+      return { ...state, wishlist: newWishlist };
+
+    case ACTION_TYPES.REMOVE_FROM_WISHLIST:
+      const filteredWishlist = state.wishlist.filter(item => item.id !== action.payload);
+      localStorage.setItem('aheza-wishlist', JSON.stringify(filteredWishlist));
+      return { ...state, wishlist: filteredWishlist };
+
+    case ACTION_TYPES.CLEAR_WISHLIST:
+      localStorage.setItem('aheza-wishlist', JSON.stringify([]));
+      return { ...state, wishlist: [] };
 
     // UI States
     case ACTION_TYPES.TOGGLE_MOBILE_MENU:
@@ -700,6 +726,28 @@ export const AppProvider = ({ children }) => {
       dispatch({ type: ACTION_TYPES.UPDATE_QUANTITY, payload: { productId, quantity } });
     },
     clearCart: () => dispatch({ type: ACTION_TYPES.CLEAR_CART }),
+
+    // Wishlist
+    addToWishlist: (product) => {
+      dispatch({ type: ACTION_TYPES.ADD_TO_WISHLIST, payload: product });
+      actions.addToast({
+        message: `${product.name} added to wishlist!`,
+        type: 'success',
+        autoHide: true
+      });
+    },
+    removeFromWishlist: (productId) => {
+      dispatch({ type: ACTION_TYPES.REMOVE_FROM_WISHLIST, payload: productId });
+      actions.addToast({
+        message: 'Item removed from wishlist',
+        type: 'info',
+        autoHide: true
+      });
+    },
+    clearWishlist: () => dispatch({ type: ACTION_TYPES.CLEAR_WISHLIST }),
+    isInWishlist: (productId) => {
+      return state.wishlist.some(item => item.id === productId);
+    },
     
     // UI States
     toggleMobileMenu: () => dispatch({ type: ACTION_TYPES.TOGGLE_MOBILE_MENU }),
@@ -726,6 +774,11 @@ export const AppProvider = ({ children }) => {
     },
     getCartItemCount: () => {
       return state.cart.reduce((count, item) => count + item.quantity, 0);
+    },
+
+    // Wishlist helpers
+    getWishlistCount: () => {
+      return state.wishlist.length;
     },
     
     // Product helpers
@@ -802,10 +855,37 @@ export const AppProvider = ({ children }) => {
     });
   }, [state.toasts]);
 
+  // Create manager objects for better organization
+  const cartManager = {
+    addToCart: actions.addToCart,
+    removeFromCart: actions.removeFromCart,
+    updateQuantity: actions.updateQuantity,
+    clearCart: actions.clearCart,
+    getCartTotal: helpers.getCartTotal,
+    getCartItemCount: helpers.getCartItemCount
+  };
+
+  const wishlistManager = {
+    addToWishlist: actions.addToWishlist,
+    removeFromWishlist: actions.removeFromWishlist,
+    clearWishlist: actions.clearWishlist,
+    isInWishlist: actions.isInWishlist,
+    getWishlistCount: helpers.getWishlistCount
+  };
+
+  const languageManager = {
+    translate: helpers.translate,
+    setLanguage: actions.setLanguage,
+    currentLanguage: state.language
+  };
+
   const value = {
     ...state,
     ...actions,
-    ...helpers
+    ...helpers,
+    cartManager,
+    wishlistManager,
+    languageManager
   };
 
   return (

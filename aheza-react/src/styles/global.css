@@ -1137,189 +1137,6 @@ body {
     letter-spacing: 1px;
 }
 
-/* Mattress Showcase */
-.mattress-showcase {
-    padding: var(--space-3xl) 0;
-    background: var(--bg-secondary);
-}
-
-.mattress-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-xl);
-}
-
-.mattress-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
-    border-radius: var(--border-radius-xl);
-    overflow: hidden;
-    transition: all var(--transition-base);
-    opacity: 1;
-    transform: translateY(0);
-    transform-style: preserve-3d;
-    cursor: pointer;
-}
-
-.mattress-card.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.mattress-card:hover {
-    transform: translateY(-5px) rotateX(5deg) translateZ(10px);
-    box-shadow: var(--shadow-xl);
-}
-
-.mattress-image {
-    height: 250px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    transition: transform var(--transition-slow);
-}
-
-.mattress-card:hover .mattress-image {
-    transform: scale(1.05);
-}
-
-.mattress-badge {
-    position: absolute;
-    top: var(--space-md);
-    right: var(--space-md);
-    background: var(--gradient-primary);
-    color: white;
-    padding: var(--space-xs) var(--space-sm);
-    border-radius: var(--border-radius);
-    font-size: 0.875rem;
-    font-weight: 600;
-}
-
-.mattress-content {
-    padding: var(--space-xl);
-}
-
-.mattress-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: var(--space-sm);
-    color: var(--text-primary);
-}
-
-.mattress-description {
-    color: var(--text-secondary);
-    margin-bottom: var(--space-md);
-    line-height: 1.6;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.mattress-description.expanded {
-    -webkit-line-clamp: unset;
-}
-
-.read-more-toggle {
-    background: none;
-    border: none;
-    color: var(--accent-500);
-    cursor: pointer;
-    font-weight: 500;
-    padding: 0;
-    margin-bottom: var(--space-md);
-    transition: color var(--transition-fast);
-}
-
-.read-more-toggle:hover {
-    color: var(--accent-700);
-}
-
-.mattress-rating {
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
-    margin-bottom: var(--space-md);
-}
-
-.rating-stars {
-    color: var(--warning);
-    font-size: 1.125rem;
-}
-
-.rating-count {
-    color: var(--text-muted);
-    font-size: 0.875rem;
-}
-
-.mattress-features {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-    margin-bottom: var(--space-md);
-}
-
-.feature-tag {
-    background: var(--bg-tertiary);
-    color: var(--text-secondary);
-    padding: var(--space-xs) var(--space-sm);
-    border-radius: var(--border-radius);
-    font-size: 0.875rem;
-}
-
-.mattress-price {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: var(--accent-600);
-    margin-bottom: var(--space-lg);
-}
-
-.mattress-actions {
-    display: flex;
-    gap: var(--space-md);
-}
-
-.cta-button.secondary {
-    background: var(--bg-tertiary);
-    color: var(--text-primary);
-    border: 1px solid var(--border-light);
-}
-
-.cta-button.secondary:hover {
-    background: var(--bg-primary);
-    border-color: var(--accent-300);
-}
-
-.show-more-container {
-    text-align: center;
-    margin-top: var(--space-2xl);
-}
-
-.show-more-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-sm);
-    color: var(--accent-600);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.125rem;
-    transition: all var(--transition-base);
-}
-
-.show-more-btn:hover {
-    transform: translateX(5px);
-    color: var(--accent-700);
-}
-
-.show-more-btn i {
-    transition: transform var(--transition-base);
-}
-
-.show-more-btn:hover i {
-    transform: translateX(3px);
-}
-
 /* Sleep Calculator */
 .sleep-calculator {
     padding: var(--space-3xl) 0;
@@ -3698,4 +3515,852 @@ body {
 .tips-categories button[aria-pressed="true"] {
   background: linear-gradient(135deg, #3b82f6, #2563eb);
   color: white;
+}
+
+/* Mattress Showcase Enhanced Modern Styles */
+.mattress-showcase {
+    padding: var(--space-4xl) 0;
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.mattress-showcase::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-300), transparent);
+}
+
+.controls-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-xl);
+    padding: var(--space-lg);
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-xl);
+    gap: var(--space-lg);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+}
+
+.controls-panel:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-300);
+}
+
+.filter-controls,
+.sort-controls {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.filter-select,
+.sort-select {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-sm) var(--space-md);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    min-width: 150px;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='%23666' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 10px;
+}
+
+.filter-select:focus,
+.sort-select:focus {
+    outline: none;
+    border-color: var(--accent-500);
+    box-shadow: 0 0 0 3px var(--accent-500/20);
+}
+
+.filter-select:hover,
+.sort-select:hover {
+    border-color: var(--accent-300);
+    transform: translateY(-1px);
+}
+
+.results-count {
+    color: var(--text-muted);
+    margin-bottom: var(--space-lg);
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    display: inline-block;
+    border: 1px solid var(--glass-border);
+}
+
+.mattress-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: var(--space-xl);
+    perspective: 1000px;
+}
+
+.mattress-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-2xl);
+    overflow: hidden;
+    transition: all var(--transition-slow);
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+    cursor: pointer;
+    position: relative;
+    isolation: isolate;
+}
+
+.mattress-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--accent-500/3) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity var(--transition-slow);
+    border-radius: var(--border-radius-2xl);
+    z-index: -1;
+}
+
+.mattress-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--border-radius-2xl);
+    padding: 2px;
+    background: linear-gradient(135deg, var(--accent-500/20), transparent, var(--accent-300/20));
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: subtract;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    z-index: -1;
+}
+
+.mattress-card.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Modern Hover Effects - No Layout Shift */
+.mattress-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+        var(--shadow-2xl),
+        0 8px 40px var(--accent-500/10),
+        0 0 0 1px var(--accent-500/5);
+}
+
+.mattress-card:hover::before {
+    opacity: 1;
+}
+
+.mattress-card:hover::after {
+    opacity: 1;
+}
+
+.mattress-card:hover .mattress-image {
+    transform: scale(1.05);
+}
+
+.mattress-card:hover .card-glow {
+    opacity: 0.6;
+}
+
+/* Card Glow Effect */
+.card-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-500), transparent);
+    opacity: 0;
+    transition: opacity var(--transition-slow);
+    z-index: 1;
+}
+
+.card-header {
+    position: relative;
+    overflow: hidden;
+}
+
+.mattress-image {
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: transform var(--transition-slow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-tertiary);
+}
+
+.mattress-badge {
+    position: absolute;
+    top: var(--space-md);
+    left: var(--space-md);
+    background: var(--gradient-primary);
+    color: white;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--border-radius-lg);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 2;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+}
+
+.mattress-card:hover .mattress-badge {
+    transform: scale(1.05) translateY(-1px);
+    box-shadow: var(--shadow-lg);
+}
+
+.mattress-badge.sale {
+    background: var(--gradient-danger);
+}
+
+.mattress-badge.new {
+    background: var(--gradient-success);
+}
+
+.mattress-badge.popular {
+    background: var(--gradient-warning);
+}
+
+.wishlist-btn {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-sm);
+}
+
+.wishlist-btn:hover {
+    background: var(--accent-500);
+    border-color: var(--accent-500);
+    color: white;
+    transform: scale(1.15) rotate(8deg);
+    box-shadow: var(--shadow-lg);
+}
+
+.wishlist-btn.in-wishlist {
+    background: var(--accent-500);
+    border-color: var(--accent-500);
+    color: white;
+    animation: heartBeat 0.6s ease-out;
+}
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.3); }
+    50% { transform: scale(1.1); }
+    75% { transform: scale(1.2); }
+    100% { transform: scale(1.15); }
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--bg-primary/95) 0%, transparent 60%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    opacity: 0;
+    transition: all var(--transition-base);
+    padding: var(--space-xl);
+    transform: translateY(10px);
+}
+
+.mattress-card:hover .image-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.quick-view-overlay-btn {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-light);
+    padding: var(--space-md) var(--space-xl);
+    border-radius: var(--border-radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-md);
+    transform: translateY(5px);
+}
+
+.quick-view-overlay-btn:hover {
+    background: var(--accent-500);
+    color: white;
+    border-color: var(--accent-500);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.mattress-content {
+    padding: var(--space-xl);
+    position: relative;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-md);
+    gap: var(--space-md);
+}
+
+.mattress-title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-primary);
+    line-height: 1.3;
+    flex: 1;
+    transition: color var(--transition-fast);
+}
+
+.mattress-card:hover .mattress-title {
+    color: var(--accent-600);
+}
+
+.mattress-rating {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    flex-shrink: 0;
+}
+
+.rating-stars {
+    color: var(--warning);
+    font-size: 1rem;
+    display: flex;
+    gap: 1px;
+}
+
+.rating-value {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+}
+
+.rating-count {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+.mattress-description {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.mattress-description.expanded {
+    -webkit-line-clamp: unset;
+    margin-bottom: var(--space-sm);
+}
+
+.read-more-toggle {
+    background: none;
+    border: none;
+    color: var(--accent-500);
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0;
+    margin-bottom: var(--space-lg);
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: 0.875rem;
+}
+
+.read-more-toggle:hover {
+    color: var(--accent-700);
+    gap: var(--space-sm);
+    transform: translateX(2px);
+}
+
+.mattress-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+}
+
+.feature-tag {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--border-radius);
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    transition: all var(--transition-fast);
+    border: 1px solid transparent;
+}
+
+.mattress-card:hover .feature-tag {
+    transform: translateY(-1px);
+    border-color: var(--accent-300);
+    background: var(--accent-500/5);
+}
+
+.feature-tag:hover {
+    background: var(--accent-500);
+    color: white;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: var(--shadow-sm);
+}
+
+.feature-tag.more {
+    background: transparent;
+    border: 1px dashed var(--border-light);
+}
+
+.feature-tag.more:hover {
+    border-style: solid;
+    border-color: var(--accent-500);
+}
+
+.price-section {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.original-price {
+    color: var(--text-muted);
+    text-decoration: line-through;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.mattress-price {
+    font-size: 1.875rem;
+    font-weight: 800;
+    color: var(--accent-600);
+    line-height: 1;
+    position: relative;
+}
+
+.mattress-price::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-600);
+    transition: width var(--transition-slow);
+}
+
+.mattress-card:hover .mattress-price::after {
+    width: 100%;
+}
+
+.discount-badge {
+    background: var(--success);
+    color: white;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--border-radius);
+    font-size: 0.75rem;
+    font-weight: 700;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.mattress-actions {
+    display: flex;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.cta-button {
+    flex: 1;
+    padding: var(--space-md) var(--space-lg);
+    border: none;
+    border-radius: var(--border-radius-lg);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    font-size: 0.875rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left var(--transition-slow);
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+.cta-button.primary {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+.cta-button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    background: var(--gradient-primary-hover);
+}
+
+.cta-button.secondary {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-light);
+}
+
+.cta-button.secondary:hover {
+    background: var(--bg-primary);
+    border-color: var(--accent-300);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.product-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--border-light);
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    justify-content: center;
+    text-align: center;
+    transition: all var(--transition-fast);
+}
+
+.mattress-card:hover .meta-item {
+    color: var(--text-secondary);
+    transform: translateY(-1px);
+}
+
+.meta-item i {
+    color: var(--accent-500);
+    font-size: 0.875rem;
+    transition: transform var(--transition-fast);
+}
+
+.mattress-card:hover .meta-item i {
+    transform: scale(1.2);
+}
+
+.no-products {
+    text-align: center;
+    padding: var(--space-3xl);
+    color: var(--text-muted);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-2xl);
+    margin: var(--space-xl) 0;
+}
+
+.empty-icon {
+    font-size: 4rem;
+    color: var(--border-light);
+    margin-bottom: var(--space-lg);
+    opacity: 0.7;
+}
+
+.no-products h3 {
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+    font-weight: 600;
+}
+
+.show-more-container {
+    text-align: center;
+    margin-top: var(--space-3xl);
+    position: relative;
+}
+
+.show-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-md);
+    color: var(--accent-600);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.125rem;
+    transition: all var(--transition-base);
+    padding: var(--space-lg) var(--space-2xl);
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.show-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--accent-500/10), transparent);
+    transition: left var(--transition-slow);
+}
+
+.show-more-btn:hover::before {
+    left: 100%;
+}
+
+.show-more-btn:hover {
+    transform: translateY(-3px);
+    color: var(--accent-700);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--accent-300);
+}
+
+.show-more-btn i {
+    transition: transform var(--transition-base);
+}
+
+.show-more-btn:hover i {
+    transform: translateX(5px);
+}
+
+/* Loading States */
+.loading-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: var(--space-xl);
+}
+
+.loading-skeleton {
+    background: linear-gradient(90deg, var(--bg-tertiary) 25%, var(--bg-primary) 50%, var(--bg-tertiary) 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: var(--border-radius);
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.mattress-card.loading {
+    animation: cardPulse 2s ease-in-out infinite;
+}
+
+@keyframes cardPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+/* Feedback Toast */
+.feedback-toast {
+    position: fixed;
+    top: var(--space-xl);
+    right: var(--space-xl);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--border-radius-lg);
+    color: white;
+    font-weight: 600;
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out;
+    box-shadow: var(--shadow-2xl);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.feedback-toast.success {
+    background: linear-gradient(135deg, var(--success) 0%, var(--success-dark) 100%);
+}
+
+.feedback-toast.info {
+    background: linear-gradient(135deg, var(--info) 0%, var(--info-dark) 100%);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%) translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Enhanced Scroll Animations */
+.mattress-card {
+    animation: cardEntrance 0.6s ease-out forwards;
+}
+
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .mattress-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .mattress-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .controls-panel {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--space-md);
+    }
+    
+    .content-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-sm);
+    }
+    
+    .mattress-actions {
+        flex-direction: column;
+    }
+    
+    .product-meta {
+        grid-template-columns: 1fr;
+        gap: var(--space-xs);
+    }
+    
+    .mattress-card:hover {
+        transform: translateY(-5px) scale(1.01);
+    }
+    
+    .show-more-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .mattress-showcase {
+        padding: var(--space-2xl) var(--space-md);
+    }
+    
+    .mattress-content {
+        padding: var(--space-lg);
+    }
+    
+    .price-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-sm);
+    }
+    
+    .mattress-image {
+        height: 240px;
+    }
+    
+    .filter-select,
+    .sort-select {
+        min-width: 120px;
+    }
+}
+
+/* Premium Glass Effect Enhancements */
+.mattress-card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+/* Subtle parallax effect on scroll */
+@media (prefers-reduced-motion: no-preference) {
+    .mattress-card {
+        transition: transform 0.3s ease;
+    }
+    
+    .mattress-showcase:hover .mattress-card {
+        transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    }
 }

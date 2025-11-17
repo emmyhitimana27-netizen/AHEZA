@@ -40,7 +40,7 @@ const DeliverySection = () => {
           </div>
           <div className="delivery-visual" data-scroll>
             <div className="delivery-image">
-              <img src="images/ma.jpeg" alt="Mattress delivery" />
+              <img src="https://images.unsplash.com/photo-1603732551681-2e91160cd6d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Mattress delivery" />
             </div>
           </div>
         </div>

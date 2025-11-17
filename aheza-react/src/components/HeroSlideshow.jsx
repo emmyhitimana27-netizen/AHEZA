@@ -6,7 +6,7 @@ const HeroSlideshow = () => {
   const slides = [
     {
       id: 1,
-      image: 'images/matres 7.jpg',
+      image: 'https://images.unsplash.com/photo-1617042692494-71e57a4f8c7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80',
       title: 'Welcome to AHEZA 2050',
       description: 'Discover the perfect balance of comfort and support with our premium mattress collection',
       cta: 'Explore Collection',
@@ -14,7 +14,7 @@ const HeroSlideshow = () => {
     },
     {
       id: 2,
-      image: 'images/matres 6.jpg',
+      image: 'https://images.unsplash.com/photo-1595577338638-5487a524e937?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80',
       title: 'Advanced Sleep Technology',
       description: 'Innovative materials and design for the most restorative sleep of your life',
       cta: 'Learn More',
@@ -22,7 +22,7 @@ const HeroSlideshow = () => {
     },
     {
       id: 3,
-      image: 'images/matres 5.jpg',
+      image: 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80',
       title: 'Luxury Comfort Redefined',
       description: 'Handcrafted mattresses that adapt to your body for unparalleled comfort',
       cta: 'Shop Now',
