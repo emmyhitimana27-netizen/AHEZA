@@ -92,7 +92,7 @@ export default function Testimonials() {
 
   const { data, isLoading } = useQuery(
     QUERY_KEYS.TESTIMONIALS,
-    () => api.get('/testimonials?limit=6').then(r => r.data),
+    () => api.get('/stats/testimonials', { params: { limit: 6 } }).then(r => r.data),
     { staleTime: 10 * 60 * 1000, retry: 1 }
   )
 

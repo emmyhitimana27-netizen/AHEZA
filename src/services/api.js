@@ -2,20 +2,27 @@ import axios from 'axios'
 import toast from 'react-hot-toast'
 import { API_BASE_URL } from '@utils/constants'
 
-/**
- * Axios instance with base configuration
- */
+/* Paths where 404 is handled silently (no toast) */
+const SILENT_404_PATTERNS = [
+  /\/hero-slides/,
+  /\/testimonials/,
+  /\/stats/,
+]
+
+const isSilent404 = (url = '') =>
+  SILENT_404_PATTERNS.some((p) => p.test(url))
+
 const api = axios.create({
-  baseURL: API_BASE_URL,
-  timeout: 15000,
+  baseURL:     API_BASE_URL,
+  timeout:     15000,
   headers: {
     'Content-Type': 'application/json',
-    Accept: 'application/json',
+    Accept:         'application/json',
   },
   withCredentials: true,
 })
 
-/* ─── Request Interceptor ───────────────────────────────── */
+/* ── Request interceptor ──────────────────────────────────── */
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('aheza_token')
@@ -25,11 +32,11 @@ api.interceptors.request.use(
   (error) => Promise.reject(error)
 )
 
-/* ─── Response Interceptor ───────────────────────────────── */
+/* ── Response interceptor ─────────────────────────────────── */
 api.interceptors.response.use(
   (response) => response,
   (error) => {
-    const { response } = error
+    const { response, config } = error
 
     if (!response) {
       toast.error('Network error. Please check your connection.')
@@ -37,7 +44,8 @@ api.interceptors.response.use(
     }
 
     const { status, data } = response
-    const message = data?.message || data?.error || 'An unexpected error occurred.'
+    const message  = data?.message || data?.error || 'An unexpected error occurred.'
+    const url      = config?.url || ''
 
     switch (status) {
       case 400:
@@ -46,13 +54,19 @@ api.interceptors.response.use(
       case 401:
         localStorage.removeItem('aheza_token')
         toast.error('Session expired. Please log in again.')
-        window.location.href = '/login'
+        /* Only redirect if not already on auth page */
+        if (!window.location.pathname.includes('/login')) {
+          window.location.href = '/login'
+        }
         break
       case 403:
         toast.error('You do not have permission to perform this action.')
         break
       case 404:
-        // handled per-service
+        /* Silently ignore 404 on background/content fetches */
+        if (!isSilent404(url)) {
+          toast.error(message)
+        }
         break
       case 422:
         toast.error(`Validation error: ${message}`)
@@ -69,7 +83,7 @@ api.interceptors.response.use(
         toast.error(message)
     }
 
-    return Promise.reject({ status, message, data })
+    return Promise.reject({ status, message, data, url })
   }
 )
 

@@ -13,7 +13,7 @@ export const contactService = {
    * Subscribe to newsletter
    */
   subscribe: async (email) => {
-    const { data } = await api.post('/newsletter/subscribe', { email })
+    const { data } = await api.post('/contact/newsletter/subscribe', { email })
     return data
   },
 

@@ -4,6 +4,7 @@ export const APP_DESCRIPTION =
   'Premium mattresses delivering unparalleled comfort in Musanze, Rwanda. Designed for the future, delivered to your door.'
 
 export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api'
+export const REALTIME_URL = import.meta.env.VITE_REALTIME_URL || null
 
 export const NAV_LINKS = [
   { label: 'Home',     path: '/' },
@@ -77,4 +78,7 @@ export const QUERY_KEYS = {
   CART:           'cart',
   ORDERS:         'orders',
   USER:           'user',
+  HERO_SLIDES:    'hero-slides',
+  DELIVERY_ZONES: 'delivery-zones',
+  REVIEWS:        'reviews',
 }

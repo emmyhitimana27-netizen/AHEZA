@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import { Toaster } from 'react-hot-toast'
 import { AuthProvider } from '@context/AuthContext'
 import { ThemeProvider } from '@context/ThemeContext'
+import RealtimeProvider from '@context/RealtimeProvider'
 import App from './App'
 import './styles/globals.css'
 
@@ -26,14 +27,15 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
-        <ThemeProvider>
-          <AuthProvider>
-            <App />
-            <Toaster
-              position="top-right"
-              gutter={12}
-              containerStyle={{ top: 80 }}
-              toastOptions={{
+        <RealtimeProvider>
+          <ThemeProvider>
+            <AuthProvider>
+              <App />
+              <Toaster
+                position="top-right"
+                gutter={12}
+                containerStyle={{ top: 80 }}
+                toastOptions={{
                 duration: 4000,
                 style: {
                   background:   '#12121e',
@@ -54,8 +56,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
               }}
             />
           </AuthProvider>
-        </ThemeProvider>
-      </QueryClientProvider>
+        </ThemeProvider>        </RealtimeProvider>      </QueryClientProvider>
     </HelmetProvider>
   </React.StrictMode>
 )
